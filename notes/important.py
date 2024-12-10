@@ -39,6 +39,7 @@ eval("1*2*3")                               # evaluates a string as an expressio
 abs()                                       # returns absolute value
 pow(0, 2)                                   # raise 0 to the power of 2
 divmod(2, 5)                                # returns quotient, remainder
+round(1.4542, 2)                            # returns a number rounded up to 2nd decimal point
 
 
 ## General Methods
@@ -74,6 +75,8 @@ dict().clear()                              # removes all key-value pairs
 str().format()                              # formats a string based on {}
 str().upper()                               # returns uppercase of string
 str().lower()                               # returns lowercase of string
+str().isupper()                             # returns True if uppercase
+str().islower()                             # returns True if lowercase
 str().split('')                             # splits a string based on passed function (default: " ")
 str().strip()                               # strips both sides of unnecessary characters
 str().isdigit()                             # check if string is digit
