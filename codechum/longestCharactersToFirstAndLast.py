@@ -4,7 +4,7 @@ x = input("Enter first character: ")
 y = input("Enter second character: ")
 
 
-mx = (0, 0)
+mx = (-1, -1)
 
 i = 0
 
@@ -19,11 +19,12 @@ while i < len(string):
         
     if i - start >= mx[1] - mx[0]:
         mx = (start, i)
-        
-string = string[mx[0]:mx[1]] + string[:mx[0]] + string[mx[1]:]
+
+if mx != (-1, -1):     
+    string = string[mx[0]:mx[1]] + string[:mx[0]] + string[mx[1]:]
 
 i = 0
-mx = (0, 0)
+mx = (-1, -1)
 
 while i < len(string):
     if string[i] != y:
@@ -36,7 +37,8 @@ while i < len(string):
         
     if i - start >= mx[1] - mx[0]:
         mx = (start, i)
-        
-string =  string[:mx[0]] + string[mx[1]:] + string[mx[0]:mx[1]]
+
+if mx != (-1, -1):
+    string =  string[:mx[0]] + string[mx[1]:] + string[mx[0]:mx[1]]
 
 print("First char first, last char last: {}".format(string))
